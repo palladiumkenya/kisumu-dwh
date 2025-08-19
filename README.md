@@ -7,7 +7,8 @@ It provides a modern, responsive interface showcasing Kisumu County’s data pro
 
 ## 🚀 Tech Stack
 
-* **React 18** with **TypeScript**
+* **React 19** with **TypeScript**
+* **Node 22**
 * **Vite** for fast development and build
 * **Tailwind CSS + ShadCN UI** for styling
 * **Lucide Icons**
@@ -76,7 +77,7 @@ Visit: [http://localhost:8080](http://localhost:8080)
 ```
 src/
  ├── components/     # Reusable UI components
- ├── dwh/            # Kisumu DWH-specific sections (Hero, Products, etc.)
+ ├── dwh/            # Kisumu DWH-specific sections (Hero, Welcome, Information Products, etc.)
  ├── assets/         # Static images and logos
  ├── App.tsx         # Main app entry
  └── main.tsx        # React root

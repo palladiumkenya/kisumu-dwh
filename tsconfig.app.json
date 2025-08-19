@@ -23,6 +23,8 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
 
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -30,5 +32,5 @@
       ]
     }
   },
-  "include": ["src"]
+  "include": ["src", "src/types"]
 }
