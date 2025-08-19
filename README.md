@@ -1,69 +1,96 @@
-# React + TypeScript + Vite
+# Kisumu DWH Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the **Kisumu Data Warehouse (DWH) Landing Page**, built using **React + TypeScript + Vite**.
+It provides a modern, responsive interface showcasing Kisumu County’s data products and insights.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
 
-## Expanding the ESLint configuration
+* **React 18** with **TypeScript**
+* **Vite** for fast development and build
+* **Tailwind CSS + ShadCN UI** for styling
+* **Lucide Icons**
+* **pnpm** as the package manager
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Installation & Setup
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Make sure you have [pnpm](https://pnpm.io/installation) installed globally:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install -g pnpm
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 1. Clone the repository
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/palladiumkenya/kisumu-dwh
+cd kisumu-dwh
 ```
+
+### 2. Install dependencies
+
+```bash
+pnpm install
+```
+
+### 3. Run in development mode
+
+```bash
+pnpm run dev
+```
+
+Visit: [http://localhost:5173](http://localhost:5173)
+
+### 4. Build for production
+
+```bash
+pnpm run build
+```
+
+### 5. Preview the production build
+
+```bash
+pnpm run preview
+```
+
+---
+
+## 🐳 Running with Docker
+
+Build and run using Docker:
+
+```bash
+docker build -t kisumu-dwh .
+docker run -p 8080:80 kisumu-dwh
+```
+
+Visit: [http://localhost:8080](http://localhost:8080)
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+ ├── components/     # Reusable UI components
+ ├── dwh/            # Kisumu DWH-specific sections (Hero, Products, etc.)
+ ├── assets/         # Static images and logos
+ ├── App.tsx         # Main app entry
+ └── main.tsx        # React root
+```
+
+---
+
+## 🛠️ Linting & Formatting
+
+The project includes ESLint with recommended TypeScript + React rules.
+Run lint checks with:
+
+```bash
+pnpm run lint
+```
+
+---
