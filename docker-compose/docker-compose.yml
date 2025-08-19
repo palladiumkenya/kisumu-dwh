@@ -1,0 +1,12 @@
+version: '3.4'
+services:
+  dwhlive:
+    image: kenyahmis/kisumudwh:${TAG}
+    container_name: kisumudwh
+    restart: always
+    environment:
+      - DATA_BANK_URL=${DWH_DATA_BANK_URL}
+      - GIS_URL=${DWH_GIS_URL}
+      - SELF_SERVICE_URL=${DWH_SELF_SERVICE_URL}
+    ports:
+      - "${DWH_PORT}:${DWH_HOST_PORT}"

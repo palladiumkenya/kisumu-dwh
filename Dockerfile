@@ -20,6 +20,10 @@ FROM nginx:stable-alpine
 # Copy build output
 COPY --from=builder /app/dist /usr/share/nginx/html
 
+# Copy the entrypoint script and make it executable
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
 # Expose port 80
 EXPOSE 80
 
