@@ -7,7 +7,7 @@ It provides a modern, responsive interface showcasing Kisumu County’s data pro
 
 ## 🚀 Tech Stack
 
-* **React 18** with **TypeScript**
+* **React 22** with **TypeScript**
 * **Vite** for fast development and build
 * **Tailwind CSS + ShadCN UI** for styling
 * **Lucide Icons**
