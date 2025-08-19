@@ -40,7 +40,7 @@ jobs:
       - name: Install dependencies
         run: |
           if [ "${{ steps.check_lockfile.outputs.lockfile_exists }}" = "true" ]; then
-            pnpm install --frozen-lockfile
+            pnpm install --no-frozen-lockfile
           else
             pnpm install
           fi
