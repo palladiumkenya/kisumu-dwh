@@ -10,10 +10,12 @@ export default function ProductCardFilled({
                                               icon: Icon,
                                               title,
                                               body,
+                                              url
                                           }: {
     icon: React.ElementType;
     title: string;
     body: string;
+    url: string;
 }) {
     return (
         <div
@@ -27,13 +29,15 @@ export default function ProductCardFilled({
             </div>
             <h3 className="mt-3 text-lg font-semibold">{title}</h3>
             <p className="mt-1 text-sm/6 opacity-90 flex-grow">{body}</p>
-            <Button
-                className="mt-4 self-start flex items-center gap-2"
-                variant="ghost"
-            >
-                Explore
-                <ArrowRight className="size-4" />
-            </Button>
+            <a href={url}>
+                <Button
+                    className="mt-4 self-start flex items-center gap-2"
+                    variant="ghost"
+                >
+                    Explore
+                    <ArrowRight className="size-4" />
+                </Button>
+            </a>
         </div>
     );
 }
