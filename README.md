@@ -76,7 +76,7 @@ Visit: [http://localhost:8080](http://localhost:8080)
 ```
 src/
  ├── components/     # Reusable UI components
- ├── dwh/            # Kisumu DWH-specific sections (Hero, Products, etc.)
+ ├── dwh/            # Kisumu DWH-specific sections (Hero, Welcome, Information Products, etc.)
  ├── assets/         # Static images and logos
  ├── App.tsx         # Main app entry
  └── main.tsx        # React root
