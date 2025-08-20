@@ -37,7 +37,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="border-t border-white/20 py-3 text-center text-sm text-white/90">© 2025 All Right Reserved</div>
+            <div className="border-t border-white/20 py-3 text-center text-sm text-white/90">&copy; {new Date().getFullYear()} All Rights Reserved</div>
         </footer>
     );
 }
