@@ -1,27 +1,27 @@
 export default function Hero() {
     return (
-        <section className="relative w-full h-[60vh] flex items-center m-0 p-0">
+        <section className="relative w-full h-[80vh] md:h-[70vh] flex items-center m-0 p-0">
             <img
                 src="/assets/Kisumu%20DWH%20Banner.png"
                 alt="Kisumu Lake Victoria"
                 className="absolute inset-0 w-full h-full object-cover"
             />
-            <div className="absolute inset-0" />
+            <div className="absolute inset-0 bg-black/40" />
 
-            <div className="absolute top-6 left-6 z-20">
+            <div className="absolute top-4 left-4 md:top-6 md:left-6 z-20">
                 <img
                     src="/assets/Logo.png"
                     alt="Kisumu County Logo"
-                    className="h-35"
+                    className="h-16 md:h-20 lg:h-28"
                 />
             </div>
 
-            <div className="relative z-10 max-w-4xl px-6 md:px-16 mt-20 text-left">
-                <h1 className="text-5xl md:text-5xl font-bold text-white text-left relative inline-block">
+            <div className="relative z-10 max-w-4xl px-4 sm:px-6 md:px-16 mt-24 sm:mt-32 text-left">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-left relative inline-block leading-snug">
                     The Kisumu <br /> Data Bank
 
                     <svg
-                        className="absolute left-0 -bottom-5 w-72 h-8"
+                        className="absolute left-0 -bottom-4 sm:-bottom-5 w-48 sm:w-60 md:w-72 h-6 md:h-8"
                         viewBox="0 0 320 40"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +48,7 @@ export default function Hero() {
                     </svg>
                 </h1>
 
-                <p className="mt-16 text-lg text-gray-200 max-w-2xl leading-relaxed">
+                <p className="mt-10 sm:mt-12 md:mt-16 text-base sm:text-lg md:text-xl text-gray-200 max-w-2xl leading-relaxed mb-12 md:mb-20">
                     At the heart of Kisumu County&apos;s health transformation lies the
                     Kisumu Data Bank — a centralized hub that seamlessly integrates,
                     processes, and analyzes health data from across the region. By

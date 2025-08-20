@@ -2,11 +2,11 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 export default function ProductCardOutlined({
-                                                icon: Icon,
-                                                title,
-                                                body,
-                                                url
-                                            }: {
+    icon: Icon,
+    title,
+    body,
+    url
+}: {
     icon: React.ElementType;
     title: string;
     body: string;
@@ -19,15 +19,15 @@ export default function ProductCardOutlined({
                     <Icon className="size-5" />
                 </div>
             </div>
-            <h3 className="mt-3 text-lg font-semibold">{title}</h3>
-            <p className="mt-1 text-sm/6 text-zinc-700 flex-grow">{body}</p>
-            <a href={url}>
+            <h3 className="mt-3 text-lg text-left font-semibold">{title}</h3>
+            <p className="mt-1 text-sm/6 text-left text-zinc-700 flex-grow">{body}</p>
+            <a href={url} className="flex justify-start">
                 <Button
                     className="mt-4 self-start"
                     variant="outline"
                 >
                     Learn more
-                    <ArrowRight className="size-4" />
+                    <ArrowRight className="size-4 ml-2" />
                 </Button>
             </a>
         </div>
