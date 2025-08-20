@@ -7,11 +7,11 @@ const brand = {
 };
 
 export default function ProductCardFilled({
-                                              icon: Icon,
-                                              title,
-                                              body,
-                                              url
-                                          }: {
+    icon: Icon,
+    title,
+    body,
+    url
+}: {
     icon: React.ElementType;
     title: string;
     body: string;
@@ -27,11 +27,11 @@ export default function ProductCardFilled({
                     <Icon className="size-5" />
                 </div>
             </div>
-            <h3 className="mt-3 text-lg font-semibold">{title}</h3>
-            <p className="mt-1 text-sm/6 opacity-90 flex-grow">{body}</p>
-            <a href={url}>
+            <h3 className="mt-3 text-lg text-left font-semibold">{title}</h3>
+            <p className="mt-1 text-sm/6 text-left opacity-90 flex-grow">{body}</p>
+            <a href={url} className="flex justify-start">
                 <Button
-                    className="mt-4 self-start flex items-center gap-2"
+                    className="mt-4 self-start flex items-center gap-2 border border-white text-white hover:bg-white/10"
                     variant="ghost"
                 >
                     Explore
