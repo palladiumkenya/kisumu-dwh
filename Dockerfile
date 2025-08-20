@@ -27,5 +27,7 @@ RUN chmod +x /entrypoint.sh
 # Expose port 80
 EXPOSE 80
 
-# Start Nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Replace default command with entrypoint script
+ENTRYPOINT ["/entrypoint.sh"]
+
+
