@@ -1,3 +1,7 @@
+[![Node.js CI](https://github.com/palladiumkenya/kisumu-dwh/actions/workflows/node.js.yml/badge.svg)](https://github.com/palladiumkenya/kisumu-dwh/actions/workflows/node.js.yml)
+
+[![Deploy](https://github.com/palladiumkenya/kisumu-dwh/actions/workflows/depoly.yml/badge.svg)](https://github.com/palladiumkenya/kisumu-dwh/actions/workflows/depoly.yml)
+
 # Kisumu DWH Landing Page
 
 This is the **Kisumu Data Warehouse (DWH) Landing Page**, built using **React + TypeScript + Vite**.

@@ -1,0 +1,49 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [22.x]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+
+      - name: Check for lockfile
+        id: check_lockfile
+        run: |
+          if [ -f "pnpm-lock.yaml" ]; then
+            echo "lockfile_exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "lockfile_exists=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Install dependencies
+        run: |
+          if [ "${{ steps.check_lockfile.outputs.lockfile_exists }}" = "true" ]; then
+            pnpm install --no-frozen-lockfile
+          else
+            pnpm install
+          fi
+
+      - name: Build
+        run: pnpm run build

@@ -14,6 +14,7 @@ export default function ProductCardFilled({
     icon: React.ElementType;
     title: string;
     body: string;
+    url: string;
 }) {
     return (
         <div
@@ -25,15 +26,17 @@ export default function ProductCardFilled({
                     <Icon className="size-5" />
                 </div>
             </div>
-            <h3 className="mt-3 text-lg text-left font-semibold">{title}</h3>
-            <p className="mt-1 text-left text-sm/6 opacity-90 flex-grow">{body}</p>
-            <Button
-                className="mt-4 self-start flex items-center gap-2"
-                variant="ghost"
-            >
-                Explore
-                <ArrowRight className="size-4" />
-            </Button>
+            <h3 className="mt-3 text-lg font-semibold">{title}</h3>
+            <p className="mt-1 text-sm/6 opacity-90 flex-grow">{body}</p>
+            <a href={url}>
+                <Button
+                    className="mt-4 self-start flex items-center gap-2"
+                    variant="ghost"
+                >
+                    Explore
+                    <ArrowRight className="size-4" />
+                </Button>
+            </a>
         </div>
     );
 }
