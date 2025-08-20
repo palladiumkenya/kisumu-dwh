@@ -34,7 +34,7 @@ export default function WelcomeSection() {
                     </div>
 
                     <div>
-                        <h2 className="text-2xl font-bold" style={{ color: brand.coral }}>
+                        <h2 className="text-2xl text-left font-bold" style={{ color: brand.coral }}>
                             Welcome
                         </h2>
                         <div className="prose prose-zinc mt-4 max-w-none text-sm leading-relaxed text-left space-y-6">

@@ -17,8 +17,8 @@ export default function ProductCardOutlined({
                     <Icon className="size-5" />
                 </div>
             </div>
-            <h3 className="mt-3 text-lg font-semibold">{title}</h3>
-            <p className="mt-1 text-sm/6 text-zinc-700 flex-grow">{body}</p>
+            <h3 className="mt-3 text-lg text-left font-semibold">{title}</h3>
+            <p className="mt-1 text-left text-sm/6 text-zinc-700 flex-grow">{body}</p>
             <Button
                 className="mt-4 self-start"
                 variant="outline"
