@@ -1,1 +1,0 @@
-export const runtimeConfig = window.RUNTIME_CONFIG;
